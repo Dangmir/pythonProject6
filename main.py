@@ -44,7 +44,7 @@ def input_balance():
         "date":datetime.datetime.now(),
         "balance":getBal()
     }
-    dbs.balance.inser_one(date)
+    dbs.balance.insert_one(date)
 while True:
     input_income()
     input_balance()
