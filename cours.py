@@ -20,9 +20,5 @@ def get_cource():
     data = requesta.json()['USD']
     return data
 
-while True:
-    insert_one()
-    time.sleep(120)
-    print("Сплю")
-
+insert_one()
 
