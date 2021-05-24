@@ -22,7 +22,7 @@ def get_cource():
 
 while True:
     insert_one()
-    time.sleep(60)
+    time.sleep(120)
     print("Сплю")
 
 
