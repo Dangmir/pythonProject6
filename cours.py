@@ -3,16 +3,18 @@ import pymongo
 import datetime
 import time
 client = pymongo.MongoClient("mongodb+srv://lexa324sa:nuBAapK0ugNy2Rfg@cluster0.jb34r.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-db = client["course"]
+db = client["cursbtc"]
+dbs = client['course']
 
 def insert_one():
     a = get_cource()
-    day = datetime.datetime.now()
+    day = datetime.datetime.now().isoformat('|','minutes')
     btc = {
         "date":day,
         "course":a
     }
-    db.course.insert_one(btc)
+    dbs.course.insert_one(btc)
+    db.cursbtc.insert_one(btc)
 
 def get_cource():
 
@@ -21,4 +23,3 @@ def get_cource():
     return data
 
 insert_one()
-
